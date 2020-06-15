@@ -6,7 +6,7 @@
 % Figures (.png files) of individual peaks with the marked integrated area (red line). One .xlsx file containing the name of the experiment (parsed from the title), integral of the peak,  ppm of peak max and half-width of the peak. 
 % Tested on:
 % Matlab R2020a (with Signal processing toolbox), TopSpin 4.0.8 and Office 365
-
+% Contact author: mar.jakubec@gmail.com
 %--------------------
 clear all 
 close all
