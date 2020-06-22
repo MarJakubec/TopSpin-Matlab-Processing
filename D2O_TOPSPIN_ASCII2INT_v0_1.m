@@ -63,9 +63,9 @@ legend('off')
 title(sprintf('%s',name{i}))
 xlabel('ppm')
 ylabel('intensity')
-th = sscanf(files(i).folder(end-12:end),'%[\\esr]%d\\pdata\\1');
+th = sscanf(files(i).folder(end-10:end),'%*[^0123456789]%d');
 
-print(sprintf('%d.png',th(end)),'-dpng')
+print(sprintf('%d.png',th(1)),'-dpng')
 close all 
 res_int(i,1) = intg; 
 res_ppm(i,1) = locs;
