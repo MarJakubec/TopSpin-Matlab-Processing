@@ -39,7 +39,7 @@ end
 for i = 1:size(files,1)
 mtest(:,1) = out{i}(:,4);
 mtest(:,2) = out{i}(:,2);
-mtest = mtest(out{i}(:,4)> 3 & out{1}(:,4)<6.5,:);
+mtest = mtest(out{i}(:,4)> 3 & out{i}(:,4)<6.5,:);
 mtest = flipud(mtest);
 
 maxint = max(mtest(:,2));
