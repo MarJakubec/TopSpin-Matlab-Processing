@@ -63,7 +63,11 @@ legend('off')
 title(sprintf('%s',name{i}))
 xlabel('ppm')
 ylabel('intensity')
-th = sscanf(files(i).folder(end-10:end),'%*[^0123456789]%d');
+
+to_scan = files(i).folder(end-12:end);
+ind = regexp(to_scan,'\\');
+th = sscanf(to_scan(ind(1):ind(2)),'%*[^0123456789]%d');
+
 
 print(sprintf('%d.png',th(1)),'-dpng')
 close all 
