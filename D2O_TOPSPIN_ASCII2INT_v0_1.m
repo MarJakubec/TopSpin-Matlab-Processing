@@ -43,11 +43,11 @@ mtest = mtest(out{i}(:,4)> 3 & out{i}(:,4)<6.5,:);
 mtest = flipud(mtest);
 
 maxint = max(mtest(:,2));
-[pks,locs,w,p] = findpeaks(mtest(:,2),mtest(:,1),'MinPeakHeight',maxint*0.3);
+[pks,locs,w,p] = findpeaks(mtest(:,2),mtest(:,1),'MinPeakHeight',maxint*0.9);
 
 h = figure;
 hold on
-findpeaks(mtest(:,2),mtest(:,1),'MinPeakHeight',maxint*0.3,'Annotate','extents');
+findpeaks(mtest(:,2),mtest(:,1),'MinPeakHeight',maxint*0.9,'Annotate','extents');
 set(gca,'XDir','reverse')
 % wid = multiplication of half width
 dataObjs = findobj(h,'-property','YData');
