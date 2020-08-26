@@ -65,6 +65,8 @@ plot(mtest(ind_int2,1),zeros(size(mtest(ind_int2,1),1)),'g','Linewidth',2);
 
 if max(mtest(:,2))< 1E5
 ylim ([0 1E5])
+else
+ylim ([0 inf])
 end
 
 title(sprintf('%s',name{i}))
